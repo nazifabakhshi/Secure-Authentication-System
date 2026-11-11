@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" >
+</head>
+
+<body>
+    <h1>Password Authentication System</h1>
+    <div class="box">
+
+        <h2>Register</h2>
+
+        <form action="/register" method="POST">
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+
+            <input
+                type="text"
+                name="security_answer"
+                placeholder="What city were you born in?"
+                required
+            >
+            <p class="instruction">
+            Password must be at least 8 characters and start with a uppercase letter.
+        </p>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+             
+    
+            <button type="submit">
+                Login
+            </button>
+        </form>
+    </div>
+
+    <div class="box">
+
+        <h2>Reset Password</h2>
+
+        <form action="/reset" method="POST">
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="text"
+                name="security_answer"
+                placeholder="What City you born in "
+                required
+            >
+
+            <input
+                type="password"
+                name="new_password"
+                placeholder="New Password"
+                required
+            > 
+             <p class="instruction">
+            Password must be at least 8 characters and start with a uppercase letter.
+        </p>
+
+            <button type="submit">
+                Reset Password
+            </button>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
